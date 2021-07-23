@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/historyFragment">
+
+    <action android:id="@+id/action_global_trackingFragment"
+        app:destination="@+id/sessionFragment"
+        app:launchSingleTop="true" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="pt.tfc.walktest.ui.fragments.HistoryFragment"
+        android:label="HistoryFragment">
+
+        <action
+            android:id="@+id/action_historyFragment_to_sessionFragment"
+            app:destination="@id/sessionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionFragment"
+        android:name="pt.tfc.walktest.ui.fragments.TrackingFragment"
+        android:label="SessionFragment">
+
+        <action
+            android:id="@+id/action_sessionFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="pt.tfc.walktest.ui.fragments.HelpFragment"
+        android:label="HelpFragment" />
+
+</navigation>

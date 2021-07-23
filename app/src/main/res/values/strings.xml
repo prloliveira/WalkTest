@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">Walk Test</string>
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Distance</item>
+        <item>Session Time</item>
+    </string-array>
+    <string name="bottom_nav_history">History</string>
+    <string name="bottom_nav_help">Help</string>
+    <string name="toolbar_cancel_session">Cancel Session</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC9L8dhl7w8nbDV9oE79HbmnzjfQA-dQ3E</string>
+    <string name="operator_name">Operator Name</string>
+    <string name="operator_id">Operator ID</string>
+    <string name="cid">CID</string>
+    <string name="lac">LAC</string>
+    <string name="type">Type</string>
+    <string name="call_state">Call State</string>
+    <string name="screenshot_from_map_session">Screenshot from map session.</string>
+    <string name="date">DATE</string>
+    <string name="time">TIME</string>
+    <string name="distance">DISTANCE</string>
+    <string name="cloud_with_up_arrow_button">Cloud with UP arrow button.</string>
+    <string name="trash_button">Trash button.</string>
+    <string name="toolbar_walk_test">Walk Test</string>
+    <string name="phone_icon_description">Phone icon.</string>
+    <string name="signal_strength">Signal strength</string>
+
+</resources>

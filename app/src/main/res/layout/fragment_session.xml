@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.gms.maps.MapView android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/sessionInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/sessionInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView">
+
+        <com.google.android.material.textview.MaterialTextView android:id="@+id/sessionTimer"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="00:00:00:00"
+            android:textAlignment="center"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <RelativeLayout android:id="@+id/telephonyData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sessionTimer">
+
+            <LinearLayout android:id="@+id/signalStrengthBars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View android:id="@+id/signalBar01"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/signal_bar_white"
+                    app:layout_constraintEnd_toStartOf="@+id/signalBar02" />
+
+                <View android:id="@+id/signalBar02"
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/signal_bar_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/signalBar01" />
+
+                <View android:id="@+id/signalBar03"
+                    android:layout_width="10dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/signal_bar_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/signalBar05" />
+
+                <View android:id="@+id/signalBar04"
+                    android:layout_width="10dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/signal_bar_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/signalBar02" />
+
+                <View android:id="@+id/signalBar05"
+                    android:layout_width="10dp"
+                    android:layout_height="75dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/signal_bar_white"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/signalBar04" />
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/operatorInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/signalStrengthBars">
+
+                <TextView android:id="@+id/operatorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:text="@string/operator_name" />
+
+                <TextView android:id="@+id/operatorId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/operator_id" />
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/cellInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/operatorInfo"
+                android:layout_toEndOf="@id/signalStrengthBars">
+
+                <TextView android:id="@+id/cid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:text="@string/cid" />
+
+                <TextView android:id="@+id/lac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8sp"
+                    android:text="@string/lac" />
+
+                <TextView android:id="@+id/networkType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signalStrengthInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cellInfo"
+                android:layout_toEndOf="@id/signalStrengthBars">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/signalStrength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--- dBm"
+                    android:textSize="27sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/callStateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonStartSession"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telephonyData">
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/phone_icon_description"
+                app:srcCompat="@drawable/ic_baseline_phone_24" />
+
+            <TextView
+                android:id="@+id/callState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8sp"
+                android:text="@string/call_state" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonStartSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonFinishSession"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telephonyData"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFinishSession"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonStartSession"
+            app:layout_constraintTop_toBottomOf="@+id/telephonyData"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

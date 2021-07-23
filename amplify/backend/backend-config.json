@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "walktest11cc550e": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  },
+  "storage": {
+    "labeltfcandroid": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

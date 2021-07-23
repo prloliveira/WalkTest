@@ -1,0 +1,20 @@
+{
+  "devtfc": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-walktest-devtfc-225008-authRole",
+      "UnauthRoleArn": "arn:aws:iam::087090675203:role/amplify-walktest-devtfc-225008-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::087090675203:role/amplify-walktest-devtfc-225008-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-walktest-devtfc-225008-deployment",
+      "UnauthRoleName": "amplify-walktest-devtfc-225008-unauthRole",
+      "StackName": "amplify-walktest-devtfc-225008",
+      "StackId": "arn:aws:cloudformation:us-west-2:087090675203:stack/amplify-walktest-devtfc-225008/f7dc17b0-e748-11eb-abae-06b8c56c9d47",
+      "AmplifyAppId": "d308v20zi7zv50"
+    },
+    "categories": {
+      "auth": {
+        "walktest11cc550e": {}
+      }
+    }
+  }
+}

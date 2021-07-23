@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/historyFragment"
+        android:title="@string/bottom_nav_history"
+        android:icon="@drawable/ic_baseline_history_24" />
+
+    <item android:id="@+id/helpFragment"
+        android:title="@string/bottom_nav_help"
+        android:icon="@drawable/ic_baseline_help_24" />
+
+</menu>
